@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.deleteController">
+   <children>
+      <TextArea editable="false" layoutX="16.0" layoutY="54.0" prefHeight="170.0" prefWidth="373.0" text="Whether the student is no longer a scholar, or he/she had already graduated, you can delete his/her personal and scholarship information from this system to save space. Please be reminded that this action CANNOT BE UNDONE, and the data you are about to remove is not retrievable. Having that said, please make sure that your decision is final before proceeding." wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="45.0" layoutY="26.0" prefHeight="25.0" prefWidth="76.0" text="Warning!" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true">
+         <image>
+            <Image url="resources/warning icon.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="studentCB" layoutX="16.0" layoutY="230.0" prefHeight="30.0" prefWidth="286.0" promptText="Select a student you wish to remove" visibleRowCount="20">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Button fx:id="selectButton" layoutX="313.0" layoutY="230.0" mnemonicParsing="false" onAction="#select" prefHeight="25.0" prefWidth="76.0" text="Select">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="deleteButton" disable="true" layoutX="16.0" layoutY="270.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="373.0" text="DELETE!" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
